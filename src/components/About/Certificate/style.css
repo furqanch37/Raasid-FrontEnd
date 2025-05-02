@@ -1,0 +1,118 @@
+.certifications-container {
+  padding: 0rem;
+  padding-bottom: 70px;
+}
+
+.certifications-title {
+  text-align: center;
+  font-size: calc(1.5rem + 1vw);
+  margin-bottom: 4rem;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.highlight-top {
+  font-family: Chalkcoal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 60px;
+  text-align: center;
+  background-image: linear-gradient(90deg, #047244 0%, #cd9a00 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+.lower-font {
+  font-size: 65px !important;
+}
+.certifications-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  padding: 50px 3%;
+}
+
+.cert-card {
+  text-align: center;
+  border-radius: 35px;
+  width: 280px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  background-image: url(../../../Assets/Images/certification/border.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-image {
+  width: 50%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.cert-name {
+  font-size: calc(0.7rem + 0.5vw); /* Responsive font size for cert name */
+  color: #333;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .certifications-title {
+    gap: 10px;
+  }
+
+  .certifications-grid {
+    gap: 50px;
+  }
+
+  .cert-card {
+    width: 200px;
+    height: 180px;
+    padding: 15px;
+  }
+
+  .highlight-top {
+    font-size: 28px !important;
+    margin-top: -30px !important;
+    font-weight: 800 !important;
+  }
+
+  .cert-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .certifications-title {
+    /* flex-direction: column; */
+    gap: 15px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+
+  .certifications-grid {
+    gap: 70px;
+  }
+
+  .highlight-top {
+    font-size: 1.5rem;
+  }
+
+  .cert-name {
+    font-size: 18px;
+  }
+}

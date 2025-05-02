@@ -1,0 +1,136 @@
+@keyframes slideIn {
+  from {
+    right: -10%;
+    opacity: 0;
+  }
+  to {
+    right: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 20px;
+    opacity: 1;
+  }
+  to {
+    right: -10%;
+    opacity: 0;
+  }
+}
+
+@keyframes progressBar {
+  from {
+    width: 100%;
+    right: 0;
+  }
+  to {
+    width: 0%;
+    right: 0;
+  }
+}
+
+.toast-container {
+  position: fixed;
+  top: 30px;
+  right: -10%;
+  background: white;
+  padding: 15px 0;
+  padding-top: 0;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  overflow: hidden;
+  width: 280px;
+  height: 90px;
+  display: none;
+}
+
+.toast-container.hideInitial {
+  display: none;
+}
+.toast-container.show {
+  display: flex;
+  animation: slideIn 0.4s ease-in-out forwards;
+}
+
+.toast-container.hide {
+  display: flex;
+  animation: slideOut 0.4s ease-in-out forwards;
+}
+
+.toast-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  animation: progressBar 3s linear forwards;
+}
+
+/* Additional CSS for progress bar statuses */
+.progress-success {
+  background: linear-gradient(90deg, #047244 0%, #cd9a00 100%);
+}
+
+.progress-loading {
+  background: linear-gradient(90deg, #ffc107 0%, #e0a800 100%);
+}
+
+.progress-error {
+  background: linear-gradient(90deg, #dc3545 0%, #c82333 100%);
+}
+
+.progress-default {
+  background: linear-gradient(90deg, #6c757d 0%, #5a6268 100%);
+}
+
+.toast-progress.paused {
+  animation-play-state: paused;
+}
+
+.toast-message {
+  margin-top: 17px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-bottom: 4px;
+}
+
+.view-cart-btn {
+  background: linear-gradient(90deg, #047244 0%, #cd9a00 100%);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.close-toast-btn {
+  background: none;
+  border: none;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: black;
+}
+.toast-progress.paused {
+  animation-play-state: paused;
+}
+.centered-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

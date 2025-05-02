@@ -1,0 +1,470 @@
+.orders-history-wrapper{
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    padding:10px 13.4%;
+    padding-top: 20px;
+    flex-direction: column;
+    gap:60px;
+    font-family: "Inter", sans-serif !important;   
+}
+.orders-history-navigation{
+    justify-content: space-between;
+    width: 100%;
+}
+.orders-history-nav-sec-one{
+    gap:20px;
+    padding: 15px;
+    background-image: url(../../../Assets/Images/ordershistory/borderone.png);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    color: #000;
+  
+    
+}
+
+.orders-history-nav-sec-one button{
+    border:none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 15px;
+
+}
+
+.orders-history-nav-sec-one button.active{
+    background: linear-gradient(90deg, rgba(4, 114, 68, 0.63) 0%, rgba(205, 154, 0, 0.63) 100%);
+    color: #fff;
+}
+.orders-history-nav-sec-two{
+    position: relative;
+    background-image: url(../../../Assets/Images/ordershistory/bordertwo.png);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    padding:20px 25px;
+    margin-top:7px;
+}
+
+.orders-history-nav-sec-two h1{
+    font-size: 19px;
+    width: 180px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.orders-history-main {
+    width: 100%;
+    background-image: url(../../../Assets/Images/ordershistory/borderthree.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 70vh;
+    overflow-y: auto;
+    padding: 50px 60px;
+    border-radius: 20px;
+}
+
+/* Custom Scrollbar */
+.orders-history-main::-webkit-scrollbar {
+    width: 8px; /* Adjust scrollbar width */
+    border-radius: 10px; /* Ensures scrollbar corners match */
+}
+
+.orders-history-main::-webkit-scrollbar-track {
+    background: transparent; /* Makes track blend with the div */
+    border-radius: 10px;
+}
+
+.orders-history-main::-webkit-scrollbar-thumb {
+    background: rgba(4, 114, 68, 0.63); /* Scrollbar color */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.orders-history-main::-webkit-scrollbar-thumb:hover {
+    background: rgba(4, 114, 68, 0.85); /* Darker color on hover */
+}
+
+/* Works on Firefox */
+.orders-history-main {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(4, 114, 68, 0.63) transparent;
+}
+
+.order-details-wrapp{
+    width: 100%;
+    margin-bottom: 70px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.order-details-wrapp::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background: linear-gradient(90deg, #047244 0%, #CD9A00 100%);
+  }
+  .order-details-wrapp:last-of-type::after {
+    display: none;
+}
+
+.order-detail-row-one, .order-detail-row-two{
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.order-detail-row-one h1{
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 7.5%;
+}
+
+.order-detail-row-one h2{
+    font-weight: 500;
+    font-size: 19px;
+    margin-right: 20%;
+}
+.order-detail-row-one h2 span, 
+.order-detail-row-two h3 span,
+.order-detail-row-three h4 span{
+    font-weight: 700;
+}
+
+.order-detail-row-one button, .clear-cart-wrapper button, .product-bought-details button, .feedback-btn{
+    outline: none;
+    border:2px solid #047244;
+    color: #047244;
+    background: linear-gradient(90deg, rgba(4, 114, 68, 0.3) 0%, rgba(205, 154, 0, 0.3) 100%);
+    border-radius: 12px;
+    padding: 9px 18px;
+    font-weight: 600;
+}
+@media(max-width:768px){
+    
+.order-detail-row-one button, .clear-cart-wrapper button, .product-bought-details button{
+    padding: 6px 15px;
+    font-size: 14px;
+}
+}
+.open-order-details-btn{
+    margin-left: 15%;
+    margin-bottom: -3%;
+}
+
+
+
+
+
+
+
+.order-detail-row-two button{
+    background: transparent;
+    color: #047244;
+    border:2px solid #047244;
+    outline: none;
+    border-radius: 12px;
+    padding: 7px 18px;
+    font-weight: 700;
+    font-size: 17px;
+    gap:10px;
+    margin-right: 7.5%;
+}
+
+.order-detail-row-two button span{
+    margin-top: 2px;
+}
+.order-detail-row-two h3{
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 2%;
+}
+
+.order-detail-row-two h4{
+  margin-right: 2%;
+  position: relative;
+}
+
+.order-detail-row-two .list-dot{
+    width: 10px;
+    display: inline-block;
+    height: 10px;
+    border-radius: 50%;
+    background: #047244;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+
+.order-detail-row-three h4{
+    font-weight: 500;
+}
+
+.order-detail-row-three h4 img{
+    margin-bottom: -4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.order-details-wrapp .open-order-details-btn{
+    transform: rotate(180deg);
+}
+.order-details-wrapp.active .open-order-details-btn{
+    transform: rotate(0deg);
+}
+
+.products-bought-wrapper {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.products-bought {
+    width: 100%;
+    max-width: 90%;
+    overflow-x: auto !important;
+    gap: 35px;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.products-bought::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.product-bought-details {
+    flex-direction: column;
+    width: 320px;
+    background-image: url(../../../Assets/Images/ordershistory/borderfour.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 30px 15px;
+    gap: 20px;
+    flex: 0 0 auto;
+}
+
+.product-bought-details-top-row,
+.product-bought-details-bottom-row {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.product-bought-details-top-row img{
+    max-height: 100px;
+    max-width: 100px;
+}
+.product-bought-details h1 {
+    color: #047244;
+    font-size: 18px;
+}
+
+.product-bought-details h2 {
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.product-bought-details p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.product-bought-details button {
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.products-bought-wrapper .slide-bought-products {
+    width: 60px;
+    cursor: pointer;
+}
+@media(max-width:1440px){
+    
+    
+.orders-history-main{
+    width: 100%;
+    background-image:none;
+    height: 70vh;
+    border-radius: 20px;
+    border:1px solid #047244;
+    padding: 40px 20px;
+  
+}
+.order-details-wrapp{
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.order-details-wrapp::after {
+    display: none;
+}
+
+.order-detail-row-one h1{
+    font-size: 16px;
+    margin-right: 5%;
+}
+.order-detail-row-two{
+    flex-wrap: wrap;
+    gap:20px;
+
+}
+.order-detail-row-one h2{
+  
+    font-size: 16px;
+    margin-right: 5%;
+}
+
+.open-order-details-btn{
+    margin-left: 10%;
+    width: 50px;
+}
+
+
+
+
+
+
+
+.order-detail-row-two button{
+    margin-right: 2%;
+}
+
+.order-detail-row-two button span{
+    margin-top: 2px;
+}
+.order-detail-row-two h3{
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 5%;
+}
+.order-detail-row-two h4{
+    font-size: 15px;
+}
+.order-detail-row-three h4{
+    font-size: 15px;
+}
+
+
+}
+@media(max-width:768px){
+    .orders-history-wrapper{
+        padding:10px 3.4%;
+        padding-top: 0;
+        gap:40px;
+        
+    }
+    .orders-history-navigation{
+        justify-content: center;
+        flex-direction: column;
+        gap:20px;
+    }
+    .orders-history-nav-sec-one{
+        gap:0;
+        padding: 10px;
+        }
+    
+    .orders-history-nav-sec-one button{
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 10px;
+    }
+    
+    .orders-history-nav-sec-two{
+        padding:12px;
+        margin-top:7px;
+    }
+    
+    .orders-history-nav-sec-two h1{
+        font-size: 15px;
+        width: 130px;
+    }
+    .orders-history-nav-sec-two img{
+        width: 25px;
+        margin-top: -2px;
+    }
+
+
+
+
+}
+
+
+
+
+.feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dim background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.feedback-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    position: relative;
+}
+
+.feedback-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feedback-content textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    z-index: 1001; /* Ensure it's above overlay */
+    position: relative;
+}
+
+.feedback-content select {
+    padding: 5px;
+    font-size: 16px;
+    z-index: 1001;
+    position: relative;
+}
+
+.timeframe-dropdown {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background-color: transparent;
+    border: 2px solid green;
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    padding: 5px;
+    
+    
+  }
+  .timeframe-dropdown div {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 1px solid black;
+  }
+  .timeframe-dropdown div:hover {
+    background-color: #eee;
+    border-radius: 16px;
+  }

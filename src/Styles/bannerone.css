@@ -1,0 +1,809 @@
+.dot.active {
+  background-color: #047244;
+  background: #047244;
+}
+.banner-section .banner-one {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-text {
+  width: fit-content;
+  position: relative;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.banner-text .text-upper-border,
+.banner-text .text-lower-border {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.banner-text .text-upper-border::before,
+.banner-text .text-lower-border::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background-color: #047244;
+  animation-fill-mode: forwards;
+}
+
+.banner-text .text-upper-border::before {
+  animation: fill-left-to-right 4s forwards;
+}
+
+.banner-text .text-lower-border::before {
+  background-color: #cd9a00;
+  animation: fill-right-to-left 4s forwards;
+}
+
+@keyframes fill-left-to-right {
+  from {
+    width: 0;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes fill-right-to-left {
+  from {
+    width: 0;
+    right: 0;
+  }
+  to {
+    width: 100%;
+    right: 0;
+  }
+}
+
+.banner-text h1,
+.banner-text h2 {
+  background: linear-gradient(90deg, #047244 0%, #cd9a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  margin: 0;
+}
+
+.banner-text h1 {
+  font-size: 110px;
+  margin-bottom: -15px;
+}
+
+.banner-text h2 {
+  font-size: 65px;
+}
+.banner-four-text h1 {
+  font-size: 65px;
+}
+.banner-four-text h2 {
+  font-size: 120px;
+}
+.banner-two-text h1 {
+  font-size: 140px;
+}
+
+/* Base Styles */
+.banner-section .banner-one .banner {
+  position: absolute;
+}
+
+/* Universal animation for all images EXCEPT .banner-one-seven and .banner-one-eight */
+.banner-section
+  .banner-one
+  .banner:not(.banner-one-seven):not(.banner-one-eight):not(
+    .banner-two-seven
+  ):not(.banner-three-seven):not(.banner-three-eight):not(
+    .banner-four-seven
+  ):not(.banner-four-three):not(.banner-four-four):not(.banner-four-six):not(
+    .banner-four-eight
+  ):not(.banner-five-four):not(.banner-five-six):not(.banner-five-one):not(
+    .banner-five-seven
+  ):not(.banner-five-eight):not(.banner-one-three):not(.banner-one-four):not(
+    .banner-one-six
+  ) {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: moveInwards 1.5s ease-out forwards;
+}
+
+/* Universal animation for normal banners */
+@keyframes moveInwards {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Positioning for each image */
+.banner-section .banner-one .banner-one-one {
+  top: 0;
+  width: 25%;
+  left: 20%;
+  animation-delay: 0.1s;
+}
+
+.banner-section .banner-one .banner-one-two {
+  top: 0;
+  width: 21%;
+  left: 50%;
+  animation-delay: 0.2s;
+}
+@keyframes moveImageThreeInOne {
+  from {
+    right: -8%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.banner-section .banner-one .banner-one-three {
+  top: 8%;
+  width: 9.5%;
+  animation: moveImageThreeInOne 1.5s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-one-four {
+  top: 42%;
+  width: 6%;
+  animation: moveImageThreeInOne 2s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-one-five {
+  bottom: 0;
+  width: 15%;
+  right: 0;
+  animation-delay: 0.5s;
+}
+
+@keyframes moveImageSixInOne {
+  from {
+    left: -8%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.banner-section .banner-one .banner-one-six {
+  bottom: 12%;
+  width: 11%;
+  left: 0;
+  animation: moveImageSixInOne 1.5s ease-in-out forwards;
+}
+/* Keep original animations for seven and eight */
+@keyframes moveImageSevenInOne {
+  from {
+    top: 26%;
+    left: 28%;
+    width: 28%;
+    z-index: 4;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    top: 26%;
+    left: 8%;
+    width: 28%;
+    transform: rotate(-33deg);
+    z-index: 4;
+    opacity: 1;
+  }
+}
+
+@keyframes moveImageEightInOne {
+  from {
+    bottom: 12%;
+    width: 25%;
+    right: 28%;
+    z-index: 5;
+    opacity: 0;
+  }
+  to {
+    bottom: 5%;
+    right: 8%;
+    width: 25%;
+    z-index: 5;
+    opacity: 1;
+  }
+}
+
+.banner-section .banner-one .banner-one-seven {
+  animation: moveImageSevenInOne 2s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-one-eight {
+  animation: moveImageEightInOne 2s ease-in-out forwards;
+}
+
+/* Additional Banner Positions */
+.banner-section .banner-one .banner-one-nine {
+  top: 3%;
+  width: 7%;
+  left: 9%;
+  animation-delay: 0.7s;
+}
+
+.banner-section .banner-one .banner-one-ten {
+  top: 22%;
+  width: 2%;
+  left: 11.8%;
+  animation-delay: 0.8s;
+}
+
+.banner-section .banner-one .banner-one-eleven {
+  top: 17%;
+  width: 10%;
+  right: 20%;
+  animation-delay: 0.9s;
+}
+
+.banner-section .banner-one .banner-one-twelve {
+  top: 25%;
+  width: 3%;
+  left: 48%;
+  animation-delay: 1s;
+}
+
+.banner-section .banner-one .banner-one-thirteen {
+  top: 83%;
+  width: 2%;
+  left: 52%;
+  z-index: 999;
+  animation-delay: 1.1s;
+}
+
+.banner-section .banner-one .banner-one-fourteen {
+  top: 86.3%;
+  width: 1.4%;
+  left: 50.5%;
+  z-index: 999;
+  animation-delay: 1.2s;
+}
+
+/* banner two */
+.banner-section .banner-one .banner-two-one {
+  top: 0;
+  width: 40%;
+  left: 15%;
+}
+.banner-section .banner-one .banner-two-two {
+  top: 0;
+  width: 18%;
+  left: 50%;
+}
+@keyframes moveImageSevenInTwo {
+  from {
+    top: 26%;
+    left: 26%;
+    width: 27%;
+    z-index: 4;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    top: 20%;
+    left: 8%;
+    width: 28%;
+    transform: rotate(-33deg);
+    z-index: 4;
+    opacity: 1;
+  }
+}
+
+.banner-section .banner-one .banner-two-seven {
+  animation: moveImageSevenInTwo 2s ease-in-out forwards;
+}
+
+/* banner three */
+
+.banner-section .banner-one .banner-three-one {
+  top: 0;
+  width: 30%;
+  left: 20%;
+}
+.banner-section .banner-one .banner-three-two {
+  top: 0;
+  width: 30%;
+  left: 50%;
+}
+@keyframes moveImageSevenInThree {
+  from {
+    top: 30%;
+    left: 27%;
+    width: 23%;
+    z-index: 4;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    top: 29%;
+    left: 9%;
+    width: 23%;
+    transform: rotate(-29deg);
+    z-index: 4;
+    opacity: 1;
+  }
+}
+
+@keyframes moveImageEightInThree {
+  from {
+    bottom: 13%;
+    right: 20%;
+    width: 45%;
+    z-index: 5;
+    opacity: 0;
+  }
+  to {
+    bottom: 3%;
+    right: 0;
+    width: 45%;
+    z-index: 5;
+    opacity: 1;
+  }
+}
+
+.banner-section .banner-one .banner-three-seven {
+  animation: moveImageSevenInThree 2s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-three-eight {
+  animation: moveImageEightInThree 2s ease-in-out forwards;
+}
+
+/* banner 4 */
+
+.banner-section .banner-one .banner-four-one {
+  top: 0;
+  width: 27%;
+  left: 20%;
+}
+.banner-section .banner-one .banner-four-two {
+  top: 0;
+  width: 23%;
+  left: 50%;
+}
+
+.banner-section .banner-one .banner-four-three {
+  top: 2%;
+  width: 16.5%;
+  right: 0;
+  animation: moveImageThreeInOne 1.5s ease-in-out forwards;
+}
+.banner-section .banner-one .banner-four-four {
+  top: 42%;
+  width: 10%;
+  right: 0;
+  animation: moveImageThreeInOne 2s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-four-five {
+  bottom: 0;
+  width: 15%;
+  right: 0;
+}
+.banner-section .banner-one .banner-four-six {
+  bottom: 12%;
+  width: 13%;
+  left: 0;
+  animation: moveImageSixInOne 1.5s ease-in-out forwards;
+}
+@keyframes moveImageSevenInFour {
+  from {
+    top: 26%;
+    left: 28%;
+    width: 28%;
+    z-index: 4;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    top: 29%;
+    left: 9%;
+    width: 28%;
+    transform: rotate(80deg);
+    z-index: 4;
+    opacity: 1;
+  }
+}
+
+@keyframes moveImageEightInFour {
+  from {
+    bottom: 13%;
+    right: 30%;
+    width: 25%;
+    z-index: 5;
+    opacity: 0;
+  }
+  to {
+    bottom: 3%;
+    right: 10%;
+    width: 25%;
+    z-index: 5;
+    opacity: 1;
+  }
+}
+
+.banner-section .banner-one .banner-four-seven {
+  animation: moveImageSevenInFour 2s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-four-eight {
+  animation: moveImageEightInFour 2s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-four-nine {
+  width: 15%;
+
+  top: 3%;
+  left: 5%;
+}
+.banner-section .banner-one .banner-four-ten {
+  top: 70%;
+  width: 7%;
+  left: 44%;
+  z-index: 999;
+}
+
+.banner-section .banner-one .banner-four-eleven {
+  top: 70%;
+  width: 7%;
+  left: 40%;
+  z-index: 999;
+}
+.banner-section .banner-one .banner-four-twelve {
+  top: 78%;
+  width: 7%;
+  left: 42%;
+  z-index: 999;
+}
+
+/* banner five */
+
+@keyframes moveImageFiveOneInOne {
+  from {
+    top: -8%;
+    left: -8%;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+.banner-section .banner-one .banner-five-one {
+  top: 0;
+  width: 22%;
+  left: 0;
+  animation: moveImageFiveOneInOne 1.5s ease-in-out forwards;
+}
+.banner-section .banner-one .banner-five-two {
+  top: 0;
+  width: 23%;
+  left: 57%;
+}
+.banner-section .banner-one .banner-five-three {
+  top: 0;
+  width: 17.5%;
+  right: 0;
+}
+.banner-section .banner-one .banner-five-four {
+  top: 32%;
+  width: 10%;
+  right: 0;
+  animation: moveImageThreeInOne 1.5s ease-in-out forwards;
+}
+.banner-section .banner-one .banner-five-five {
+  bottom: 4%;
+  width: 15%;
+  right: 5%;
+}
+.banner-section .banner-one .banner-five-six {
+  bottom: 8%;
+  width: 13%;
+  left: 0;
+  animation: moveImageSixInOne 1.5s ease-in-out forwards;
+}
+.banner-section .banner-one .banner-five-seven {
+  z-index: 4;
+}
+.banner-section .banner-one .banner-five-eight {
+  z-index: 5;
+}
+@keyframes moveImageSevenInFive {
+  from {
+    top: 25%;
+    left: 28%;
+    transform: rotate(0deg);
+    width: 28%;
+    opacity: 0;
+  }
+  to {
+    top: 29%;
+    left: 9%;
+    transform: rotate(-29deg);
+    width: 28%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveImageEightInFive {
+  from {
+    top: 25%;
+    left: 50%;
+    width: 26%;
+    opacity: 0;
+  }
+  to {
+    top: 48%;
+    left: 70%;
+    width: 23%;
+    opacity: 1;
+  }
+}
+
+.banner-section .banner-one .banner-five-seven {
+  animation: moveImageSevenInFive 1.5s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-five-eight {
+  animation: moveImageEightInFive 1.5s ease-in-out forwards;
+}
+
+.banner-section .banner-one .banner-five-nine {
+  top: 4%;
+  width: 12%;
+  left: 20%;
+}
+
+@media (max-width: 1480px) {
+  @keyframes moveImageSevenInOne-1480 {
+    from {
+      top: 26%;
+      left: 28%;
+      width: 28%;
+      z-index: 4;
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      top: 29%;
+      left: 4%;
+      width: 28%;
+      transform: rotate(-33deg);
+      z-index: 4;
+      opacity: 1;
+    }
+  }
+  .banner-section .banner-one .banner-one-seven {
+    animation: moveImageSevenInOne-1480 2s ease-in-out forwards;
+  }
+  @keyframes moveImageSevenInTwo-1480 {
+    from {
+      top: 26%;
+      left: 26%;
+      width: 27%;
+      z-index: 4;
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      top: 29%;
+      left: 4%;
+      width: 28%;
+      transform: rotate(-33deg);
+      z-index: 4;
+      opacity: 1;
+    }
+  }
+  .banner-section .banner-one .banner-two-seven {
+    animation: moveImageSevenInTwo-1480 2s ease-in-out forwards;
+  }
+
+  .banner-section .banner-one .banner-five-seven {
+    top: 33%;
+    left: 6%;
+  }
+}
+
+@media (max-width: 1320px) {
+  .banner-section .banner-one .banner-one-seven {
+    top: 34%;
+    left: 4%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .banner-two-text h1,
+  .banner-text h1 {
+    font-size: 84px;
+  }
+  .banner-two-text h2,
+  .banner-text h2 {
+    font-size: 40px;
+  }
+
+  .banner-section .banner-one .banner-three-seven {
+    top: 33%;
+    left: 5%;
+  }
+  .banner-four-text h1 {
+    font-size: 50px;
+  }
+  .banner-four-text h2 {
+    font-size: 90px;
+  }
+  .text-banner-five h1 {
+    font-size: 67px;
+  }
+}
+
+@media (max-width: 1024px) {
+  @keyframes moveImageSevenInOne-1024 {
+    from {
+      top: 26%;
+      left: 28%;
+      width: 28%;
+      z-index: 4;
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      top: 40%;
+      left: 4%;
+      width: 28%;
+      transform: rotate(-33deg);
+      z-index: 4;
+      opacity: 1;
+    }
+  }
+  .banner-section .banner-one .banner-one-seven {
+    animation: moveImageSevenInOne-1024 2s ease-in-out forwards;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-section .banner-one .banner-one-seven {
+    top: 30%;
+    left: 6%;
+  }
+  .banner-section {
+    height: 60vh;
+  }
+
+  .banner-section .banner-one .banner-four-seven {
+    top: 29%;
+    left: 5%;
+    transform: rotate(80deg);
+    width: 28%;
+    z-index: 4;
+  }
+}
+@media (max-width: 768px) {
+  .banner-section .banner-one .banner-three-seven {
+    width: 18%;
+    top: 29%;
+    left: 3%;
+  }
+
+  .banner-text h1 {
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .banner-text h2 {
+    font-size: 15px;
+  }
+  .banner-four-text h1 {
+    font-size: 17px;
+  }
+  .banner-four-text h2 {
+    font-size: 30px;
+  }
+  .banner-two-text h1 {
+    font-size: 32px;
+  }
+
+  .banner-section .banner-one .banner-one-seven {
+    top: 31%;
+    left: 4%;
+  }
+  .banner-section .banner-one .banner-two-seven {
+    top: 25%;
+    left: 2%;
+  }
+  .banner-section {
+    height: 50vh !important;
+  }
+
+  .banner-section .banner-one .banner-four-seven {
+    left: 13%;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-section .banner-one .banner-four-seven {
+    left: 7.5%;
+  }
+
+  .banner-section {
+    height: 30vh !important;
+  }
+
+  .banner-section .banner-one .banner-one-seven {
+    top: 31%;
+    left: 4%;
+  }
+  @keyframes moveImageSevenInTwo-480 {
+    from {
+      top: 26%;
+      left: 26%;
+      width: 27%;
+      z-index: 4;
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      top: 25%;
+      left: 4%;
+      width: 28%;
+      transform: rotate(-33deg);
+      z-index: 4;
+      opacity: 1;
+    }
+  }
+  .banner-section .banner-one .banner-two-seven {
+    animation: moveImageSevenInTwo-480 2s ease-in-out forwards;
+  }
+  @keyframes moveImageSevenInOne-480 {
+    from {
+      top: 26%;
+      left: 28%;
+      width: 28%;
+      z-index: 4;
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      top: 31%;
+      left: 4%;
+      width: 28%;
+      transform: rotate(-33deg);
+      z-index: 4;
+      opacity: 1;
+    }
+  }
+  .banner-section .banner-one .banner-one-seven {
+    animation: moveImageSevenInOne-480 2s ease-in-out forwards;
+  }
+}

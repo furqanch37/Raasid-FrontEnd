@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
+@font-face {
+  font-family: 'Chalkcoal';
+  src: url('../Assets/Fonts/Chalkcoal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  background: url(../Assets/Images/banner/banner.png) center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+section {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+input:focus {
+  box-shadow:
+    4px 4px 8px rgba(4, 114, 68, 0.4),
+    4px 4px 8px rgba(205, 154, 0, 0.3) !important;
+  outline: none !important;
+  transition:
+    box-shadow 0.3s ease-in-out,
+    border-color 0.3s ease-in-out !important;
+}

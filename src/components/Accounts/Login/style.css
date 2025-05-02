@@ -1,0 +1,89 @@
+.accounts-wrapper{
+    height: 70vh;
+    width: 100%;
+}
+.accounts-wrapped{
+    width: 90%;
+    max-width: 500px;
+    border:2px solid #047244; 
+    padding:20px 4%;
+    padding-top: 27px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.accounts-wrapper h2{
+    font-size: 55px;
+    margin-bottom: 15px;
+    font-family: 'Chalkcoal', sans-serif;
+    font-weight: 400;
+}
+.accounts-wrapper .checkout-section-one .input-group input, .accounts-wrapper .checkout-section-one .input-group button{
+   width:100%;
+}
+.accounts-wrapper .checkout-section-one .input-group{
+    gap:30px;
+    
+}
+.accounts-wrapper .checkout-section-one .input-group button{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding:15px 10px;
+}
+.accounts-wrapper p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+    color: #047244;
+}
+
+.accounts-wrapper p::before,
+.accounts-wrapper p::after {
+    content: "";
+    width: 40px; 
+    height: 0.67px;
+    background-color: #047244; 
+    
+}
+.accounts-wrapper .form-component-link{
+    text-decoration: none;
+    color: #047244;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px; /* Reserve space for the eye icon */
+  box-sizing: border-box;
+  font-family: inherit; 
+  font-size: 16px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; /* fixed width ensures no shift */
+  cursor: pointer;
+}
+
+.eye-icon svg {
+  width: 100%;
+  height: auto;
+}

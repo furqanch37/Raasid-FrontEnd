@@ -1,0 +1,75 @@
+/* modalStyle.css */
+
+.settings-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .settings-modal {
+    background: #cecdcb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 400px; /* adjust as needed */
+  }
+  
+  .settings-modal h2 {
+    margin-top: 0;
+    font-family: 'Chalkcoal', sans-serif;
+    color: #047244;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .settings-modal label {
+    display: block;
+    margin-bottom: 5px;
+    color: #047244;
+    font-size: 14px;
+    font-weight: 450;
+  }
+  
+  .settings-modal label input {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    background: #cecdcb;
+    border-radius: 15px;
+    border: 1px solid #047240;
+    outline:none;
+  }
+  
+  .settings-modal-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+
+.gradient-button {
+    background: linear-gradient(90deg, #047244 0%, #fec61c 100%);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 1.5rem;
+    font-size: 1rem;
+    transition: opacity 0.2s ease;
+    border-radius: 15px;
+  }
+  
+  .gradient-button:hover {
+    opacity: 0.9;
+  }
+  
+ 
